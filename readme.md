@@ -209,3 +209,19 @@ Feature 1
 
 - -> src/app/dashboard/line-chart.tsx
   - GET not found page because of use line-chart.tsx instead of page.tsx
+
+# Private Folder
+
+- -> src/app/\_lib/private_folder.tsx
+- -> src/app/\_lib/page.tsx
+
+- A private folder indicates that it is a private implementation detail and should not be considered by the routing system.
+- The folder and all its sub-folders are excluded from routing
+- Prefix the folder name with an underscore
+
+## Private Folder contd
+
+- For separating UI logic from routing logic
+- For consistently organizing internal files across a project
+- For sorting and grouping files in code editors
+- And finally, for avoiding potential naming conflicts with future next.js file conventions
