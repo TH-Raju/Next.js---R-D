@@ -32,6 +32,9 @@
 npx create-next-app@latest
 ```
 
+- cd file-location
+- npm run dev
+
 React Server Component (RSC)
 
 - React Server Components is a new architecture introduced by the React team in version 18 which was quickly embraced by Next.js
@@ -49,3 +52,25 @@ React Server Component (RSC)
 
 - To create a client component, it's necessary to add "use client" at the end of the component file.
 - Client components can't perform tasks like reading files, but they have the ability to use hooks and manage interactions.
+
+# Routing
+
+- Next.js has a file-system based routing mechanism
+- URL paths that users can access in the browser are defined by files and folders in your codebase
+
+## Routing Conventions
+
+- All routes must be placed inside the app folder
+- Every file that corresponds to a route must be named page.js or page.tsx
+- Every folder corresponds to a path segment in the browser URL
+
+## File based routing
+
+- Scenario 1:
+  - -> src/app(page.tsx)
+    - http://localhost:3000/
+- Scenario 2:
+- -> src/app/about(page.tsx)
+  - http://localhost:3000/about
+- -> src/app/profile(page.tsx)
+  - http://localhost:3000/profile
