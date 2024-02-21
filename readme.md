@@ -87,4 +87,18 @@ React Server Component (RSC)
   - -> src/app(page.tsx)/blog(page.tsx)/second(page.tsx)
     - http://localhost:3000/blog/second
 
-##
+## Dynamic routes
+
+- Scenario 1:
+
+  - -> src/app(page.tsx)/products(page.tsx)/[productId](DetailPage.tsx)
+    - http://localhost:3000/products/7
+
+  ```
+  const DetailProducts = ({ params }: { params: { productId: string } }) => {
+  return <div>DetailProducts {params.productId}</div>;
+  };
+
+  export default DetailProducts;
+
+  ```
