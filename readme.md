@@ -269,3 +269,16 @@ Feature 1
       - -> http://localhost:3000/login
       - -> http://localhost:3000/register
       - -> http://localhost:3000/forgot-password
+
+    ## or
+
+    - app
+
+      - (routeg)
+        - ro (page.tsx)
+        - rotwo (page.tsx)
+
+      ## then
+
+      - -> http://localhost:3000/ro
+      - -> http://localhost:3000/rotwo
