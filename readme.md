@@ -225,3 +225,33 @@ Feature 1
 - For consistently organizing internal files across a project
 - For sorting and grouping files in code editors
 - And finally, for avoiding potential naming conflicts with future next.js file conventions
+
+# Route Groups
+
+- Allows us to logically group our routes and project files without affecting the URL path structure.
+- Let's implement authentication routes
+
+  - Register
+  - Login
+  - Forgot Password
+
+    ## From
+
+    - -> src/app/login/page.tsx
+    - -> src/app/register/page.tsx
+    - -> src/app/forgot-password/page.tsx
+
+    ## To
+
+    - -> src/app/auth/login/page.tsx
+    - -> src/app/auth/register/page.tsx
+    - -> src/app/auth/forgot-password/page.tsx
+    -
+
+    ## structure
+
+    - app
+      - auth
+        - login (page.tsx)
+        - register (page.tsx)
+        - forgot-password (page.tsx)
