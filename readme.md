@@ -91,7 +91,7 @@ React Server Component (RSC)
 
 - Scenario 1:
 
-  - -> src/app(page.tsx)/products(page.tsx)/[productId](DetailPage.tsx)
+  - -> src/app(page.tsx)/products(page.tsx)/[[productId]](DetailPage.tsx)
     - http://localhost:3000/products/7
 
   ```
@@ -107,7 +107,7 @@ React Server Component (RSC)
 
 - Scenario 1:
 
-  - -> src/app(page.tsx)/products(page.tsx)/[productId](DetailPage.tsx)/reviews/[reviewId](reviewDetail.tsx) - http://localhost:3000/products/7/reviews/1
+  - -> src/app(page.tsx)/products(page.tsx)/[[productId]](DetailPage.tsx)/reviews/[[reviewId]]((reviewDetail.tsx)) - http://localhost:3000/products/7/reviews/1
 
         ```
         const ReviewDeatails = ({
@@ -127,3 +127,80 @@ React Server Component (RSC)
 
         export default ReviewDeatails;
         ```
+
+## Catch All Segments
+
+- Scenario 1:
+
+  - -> src/app(page.tsx)/docs/[[...slug]](page.tsx)
+
+  ```
+  const Docs = () => {
+  return <div>Docs Home Page</div>;
+  };
+
+    export default Docs;
+
+  ```
+
+- http://localhost:3000/docs/feature1
+- http://localhost:3000/docs/feature2
+- http://localhost:3000/docs/feature1/concept1
+- http://localhost:3000/docs/feature1/concept2
+- http://localhost:3000/docs/feature1/concept3
+- ***
+
+http://localhost:3000/docs/feature1/concept1
+
+Feature 1
+
+- concept 1
+- concept 2
+- concept 3
+  Feature 2
+  Feature 3
+  Feature 4
+
+---
+
+- -> src/app(page.tsx)/docs/[[...slug]](page.tsx)
+
+- http://localhost:3000/docs/feature2/segment
+
+  ```
+  const Docs = ({
+    params,
+  }: {
+    params: {
+      slug: string[];
+    };
+  }) => {
+    if (params.slug.length === 2) {
+      return (
+        <h1>
+          {" "}
+          Viewing docs for feature {params.slug[0]} and concept {params.slug[1]}
+        </h1>
+      );
+    } else if (params.slug.length === 1) {
+      return <h1> Viewing docs for feature {params.slug[0]} </h1>;
+    }
+    return <div>Docs Home Page</div>;
+  };
+
+  export default Docs;
+
+  ```
+
+### main
+
+- app
+  - docs
+    - [[...slugs]]
+      - page.tsx
+  - layout.tsx
+  - page.tsx
+
+```
+
+```
