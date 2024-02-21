@@ -282,3 +282,32 @@ Feature 1
 
       - -> http://localhost:3000/ro
       - -> http://localhost:3000/rotwo
+
+# Layout
+
+- A page is UI that is unique to a route
+- A layout is UI that is shared between multiple pages in the app
+
+| Header  |
+| ------- |
+| Content |
+| Footer  |
+
+## How to create a layout
+
+- You can define a layout by default exporting a React component from a layout.js or layout.tsx file
+- That component should accept a children prop that will be populated with a child page during rendering
+
+- -> src/app/layout.tsx is automatic
+
+# Nested Layouts
+
+    - app
+
+      - layout.tsx
+      - products
+        - [productId]
+            - layout.tsx
+            - page.tsx
+        - page.tsx
+      -page.tsx
