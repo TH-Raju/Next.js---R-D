@@ -74,3 +74,17 @@ React Server Component (RSC)
   - http://localhost:3000/about
 - -> src/app/profile(page.tsx)
   - http://localhost:3000/profile
+
+## Nested routes
+
+- Scenario 3:
+  - -> src/app(page.tsx)/blog(page.tsx)
+    - http://localhost:3000/blog
+- Scenario 4:
+  - -> src/app(page.tsx)/blog(page.tsx)/first(page.tsx)
+    - http://localhost:3000/blog/first
+- Scenario 5:
+  - -> src/app(page.tsx)/blog(page.tsx)/second(page.tsx)
+    - http://localhost:3000/blog/second
+
+##
