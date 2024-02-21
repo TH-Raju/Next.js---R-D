@@ -311,3 +311,9 @@ Feature 1
             - page.tsx
         - page.tsx
       -page.tsx
+
+# Route Group Layout
+
+- Route Group uses:
+  - To organize your project in a manner that doesn't affect the URL
+  - To selectively apply a layout to certain segments while leaving others unchanged
