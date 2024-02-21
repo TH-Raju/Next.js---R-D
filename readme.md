@@ -102,3 +102,28 @@ React Server Component (RSC)
   export default DetailProducts;
 
   ```
+
+## Nested Dynamic routes
+
+- Scenario 1:
+
+  - -> src/app(page.tsx)/products(page.tsx)/[productId](DetailPage.tsx)/reviews/[reviewId](reviewDetail.tsx) - http://localhost:3000/products/7/reviews/1
+
+        ```
+        const ReviewDeatails = ({
+        params,
+        }: {
+        params: {
+
+    productId: string;
+    reviewId: string };
+    }) => {
+    return (
+    <div>
+    Review Details {params.reviewId} for product {params.productId}
+    </div>
+    );
+    };
+
+        export default ReviewDeatails;
+        ```
