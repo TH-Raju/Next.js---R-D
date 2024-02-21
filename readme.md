@@ -391,4 +391,6 @@ Feature 1
   <Link href="/blog" >
           Blog
   </Link>
+  <Link href="/blog" target="__blank"> Blog </Link> // it will open on new window
+  <Link href="/blog" replace> Blog </Link> // it will relocate to home page because it will clear the route history
   ```
