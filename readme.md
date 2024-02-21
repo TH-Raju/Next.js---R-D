@@ -204,3 +204,8 @@ Feature 1
 # Not Found Page
 
 - -> src/app/not-found.tsx
+
+# File Collocation
+
+- -> src/app/dashboard/line-chart.tsx
+  - GET not found page because of use line-chart.tsx instead of page.tsx
