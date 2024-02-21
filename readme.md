@@ -201,6 +201,6 @@ Feature 1
   - layout.tsx
   - page.tsx
 
-```
+# Not Found Page
 
-```
+- -> src/app/not-found.tsx
