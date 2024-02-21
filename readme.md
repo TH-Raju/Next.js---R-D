@@ -235,18 +235,17 @@ Feature 1
   - Login
   - Forgot Password
 
-    ## From
+    ## From this
 
     - -> src/app/login/page.tsx
     - -> src/app/register/page.tsx
     - -> src/app/forgot-password/page.tsx
 
-    ## To
+    ## To this
 
     - -> src/app/auth/login/page.tsx
     - -> src/app/auth/register/page.tsx
     - -> src/app/auth/forgot-password/page.tsx
-    -
 
     ## structure
 
@@ -255,3 +254,18 @@ Feature 1
         - login (page.tsx)
         - register (page.tsx)
         - forgot-password (page.tsx)
+
+    ## or
+
+    - app
+
+      - (auth)
+        - login (page.tsx)
+        - register (page.tsx)
+        - forgot-password (page.tsx)
+
+      ## then
+
+      - -> src/app/login/page.tsx
+      - -> src/app/register/page.tsx
+      - -> src/app/forgot-password/page.tsx
