@@ -266,6 +266,6 @@ Feature 1
 
       ## then
 
-      - -> src/app/login/page.tsx
-      - -> src/app/register/page.tsx
-      - -> src/app/forgot-password/page.tsx
+      - -> http://localhost:3000/login
+      - -> http://localhost:3000/register
+      - -> http://localhost:3000/forgot-password
