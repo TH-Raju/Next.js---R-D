@@ -394,3 +394,18 @@ Feature 1
   <Link href="/blog" target="__blank"> Blog </Link> // it will open on new window
   <Link href="/blog" replace> Blog </Link> // it will relocate to home page because it will clear the route history
   ```
+
+# Active Links
+
+- import {usePathname} from 'next/navigation';
+- add on function
+- const pathname = usePathname();
+- const isActive = pathname.startsWith(link.href);
+
+  ```
+  <Link href="/blog"
+  className = {isActive ? "font-bold mr-4": "text-blue-500 mr-4"}
+  >
+          Blog
+  </Link>
+  ```
