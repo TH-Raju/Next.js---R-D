@@ -409,3 +409,9 @@ Feature 1
           Blog
   </Link>
   ```
+
+## Intercepting routes conventions
+
+(.) to match segments on the same level
+(..) to match segments one level above
+(..)(..) to match segments two levels above
