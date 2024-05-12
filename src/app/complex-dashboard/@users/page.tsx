@@ -1,5 +1,7 @@
+import Card from "@/Components/card";
+
 const UsersPage = () => {
-  return <div>Users Page</div>;
+  return <Card>Users Page</Card>;
 };
 
 export default UsersPage;
